@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
-
+//Program to Search alphabets using BinarySearch 
 int binarysearch(char arr[], int low, int high, char target) {
     if (low <= high) {
         int mid = (low + high) / 2;
@@ -34,3 +34,4 @@ int main() {
 
     return 0;
 }
+
