@@ -8,7 +8,7 @@ public class Items
     int itemno;
     String itemname;
     int quantity;
-    float price;
+    Double price;
 
     public void inputItems(Scanner sc) //Input details 
     {
@@ -20,7 +20,7 @@ public class Items
         System.out.print("Enter Quantity: ");
         quantity = sc.nextInt();
         System.out.print("Enter Price: ");
-        price = sc.nextFloat();
+        price = sc.nextDouble();
     }
 
     public void printItemDetail() 
@@ -35,9 +35,10 @@ public class Items
     public static void main(String[] args) 
     {
         Scanner sc = new Scanner(System.in);
-        Items[] items = new Items[3]; //Array for Storing The Values (3 since specified)
+        final int ITEM_COUNT = 3;
+        Items[] items = new Items[ITEM_COUNT]; //Array for Storing The Values (3 since specified)
 
-        for (int i = 0; i < 3; i++) 
+        for (int i = 0; i < ITEM_COUNT; i++) 
         {
             System.out.println("\n Enter details for item " + (i + 1));
             items[i] = new Items();
@@ -53,3 +54,4 @@ public class Items
         sc.close();
     }
 }
+
