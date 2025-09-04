@@ -9,6 +9,7 @@
      scanf("%d",&size);
      
      ptr = (int*)malloc(size*sizeof(int)); //Allocate memory for n integers
+      // Check if malloc failed
      if(ptr == NULL)
      {
          printf("Oops Memory Allocation Failed!");
@@ -22,6 +23,7 @@
         }
      }
      printf("\n");
+     // Output elements using pointer arithmetic
      printf("\n Array Elements are: ");
      for(int i = 0 ; i < size ; i++)
      {
@@ -29,6 +31,6 @@
         printf(" ");
      }
      
-    free(ptr);
+    free(ptr);  // Free the allocated memory
     return 0;
  }
