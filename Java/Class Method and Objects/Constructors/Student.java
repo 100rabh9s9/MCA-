@@ -30,7 +30,7 @@ class Student
         System.out.println("Name: "+Name);
         System.out.println("Course: "+course);
     }
-    void updateCourse(String newCourse)
+    void updateCourse(String newCourse)// To update Course of Single Student (in this case)
      {
         this.course = newCourse;
     }
@@ -72,12 +72,13 @@ class Student
         System.out.println("\nUpdating course...");
         System.out.print("Enter new course: ");
         String newCourse = Sc.nextLine();
-        pStudent.updateCourse(newCourse);
+        pStudent.updateCourse(newCourse); //TO update the course of the specific 1 Student 
 
         System.out.println("\n----- Updated Student Details -----");
         pStudent.displayStudentDetails();
 
         Sc.close();
     }
+
 
 }
