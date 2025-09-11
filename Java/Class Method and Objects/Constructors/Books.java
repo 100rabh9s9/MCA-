@@ -39,14 +39,14 @@ class Book
         System.out.println("Author: " + author);
         System.out.println("Price: " + price);
     }
-    public static void main(String[] args) {
-        
+    public static void main(String[] args) 
+    {
         Book b1 = new Book(); // Using default constructor
         b1.printDetails();
 
         System.out.println();
-
-        // Using constructor with title and author
+        //Calling Parameterized Constructors
+        // Using constructor with title and author  
         Book b2 = new Book("Java", "James Gosling");
         b2.printDetails();
 
@@ -57,4 +57,5 @@ class Book
         b3.printDetails();
     }
 }
+
 
