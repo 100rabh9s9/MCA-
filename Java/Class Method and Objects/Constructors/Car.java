@@ -1,5 +1,5 @@
 // Base class
-class Vehicle 
+class Vehicle //SuperClass 
 {
     void start() 
     {
@@ -13,7 +13,7 @@ class Vehicle
 }
 
 // Derived class
-class Car extends Vehicle 
+class Car extends Vehicle //Sub Class
 {
     void honk()
     {
@@ -29,3 +29,4 @@ class Car extends Vehicle
         
     }
 }
+
