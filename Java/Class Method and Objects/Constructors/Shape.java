@@ -1,3 +1,4 @@
+//Create a class Shape which contains the methods to calculate the area of Triangle, Rectangle, Circle and Square
 import java.util.Scanner;
 
 class Shape 
@@ -22,7 +23,8 @@ class Shape
     {
         return side * side;
     }
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         Scanner Sc = new Scanner(System.in);
         Shape shape = new Shape();
 
@@ -69,3 +71,4 @@ class Shape
         Sc.close();
     }
 }
+
