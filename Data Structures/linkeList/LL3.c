@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 struct node
  {
     int data;
     struct node *next;
 };
-
+//Node Creation
 struct node* createNode(int val)
  {
     struct node *newNode = (struct node*)malloc(sizeof(struct node));
@@ -52,7 +51,7 @@ struct node* createList(int n)
     printf("Linked list created successfully.\n");
     return head;
 }
-
+//Function To Print LL as in Theoritical Concept
 void displayList(struct node *head)
 {
     if (head == NULL)
@@ -70,7 +69,7 @@ void displayList(struct node *head)
     }
     printf("NULL\n");
 }
-
+//Function TO count Number of Nodes
 int countNodes(struct node *head)
  {
     int count = 0;
@@ -82,12 +81,11 @@ int countNodes(struct node *head)
     }
     return count;
 }
-
 int main()
 {
     struct node *head = NULL;
     int choice, n;
-
+//Menu Driven
     while (1)
     {
         printf("\n==== Linked List Menu ====\n");
@@ -120,3 +118,4 @@ int main()
     }
     return 0;
 }
+
