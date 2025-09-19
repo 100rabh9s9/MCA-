@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+// All Insertion Functions for a Singly Linked List 
 struct Node
  {
      int data; struct Node* next;
@@ -21,7 +21,6 @@ void insertAfterNode(int key, int data);
 void insertBeforeNode(int key, int data);
 
 int main()
-
 {
  int ch, data, key, pos, found;
 while (1)
@@ -111,7 +110,6 @@ while (1)
             printf("Invalid choice! Try again.\n");
     }
 }
-
 return 0;
 }
 //Functions for Linked List//
@@ -148,7 +146,7 @@ void displayList()
             printf("List is empty.");
             return;
                 }
-    while (temp != NULL)
+    while (temp != NULL) // Traversal Statement
     {
         printf("%d --> ", temp->data);
         temp = temp->next;
@@ -298,3 +296,4 @@ prev->next = newNode;
 
 printf("Node inserted before %d.\n", key);
   }
+
