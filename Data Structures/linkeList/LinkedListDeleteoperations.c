@@ -205,19 +205,16 @@ struct Node* deleteBetweenNodes(struct Node* head, struct Node* node1, struct No
         printf("Invalid input. List or nodes are NULL.\n");
         return head;
     }
-
     if (node1->next == node2)
         {
         printf("No node exists between the given nodes.\n");
         return head;
     }
-
     if (node1->next == NULL)
         {
         printf("No node exists after the first node.\n");
         return head;
     }
-
     // Delete the node after node1 (which should be before node2)
     struct Node* nodeToDelete = node1->next;
     if (nodeToDelete == node2)
@@ -225,13 +222,11 @@ struct Node* deleteBetweenNodes(struct Node* head, struct Node* node1, struct No
         printf("No node exists between the given nodes.\n");
         return head;
     }
-
     node1->next = nodeToDelete->next;
     free(nodeToDelete);
     printf("Node between the given nodes deleted successfully.\n");
     return head;
 }
-
 // 6. Delete node at a given position (1-indexed)
 struct Node* deleteAtPosition(struct Node* head, int position)
  {
@@ -255,7 +250,6 @@ struct Node* deleteAtPosition(struct Node* head, int position)
         printf("Node at position %d deleted successfully.\n", position);
         return head;
     }
-
     // Traverse to the node before the target position
     struct Node* temp = head;
     for (int i = 1; i < position - 1 && temp != NULL; i++)
@@ -279,7 +273,7 @@ struct Node* deleteAtPosition(struct Node* head, int position)
 // 7. Reverse the linked list
 struct Node* reverseList(struct Node* head)
  {
-    if (head == NULL || head->next == NULL)
+    if (head == NULL || head->next == NULL)//Check if anything exist in list 
         {
         printf("List is empty or has only one node.\n");
         return head;
@@ -306,8 +300,7 @@ int main()
     struct Node* head = NULL;
     int choice, data, position;
     struct Node* node1, * node2, * targetNode;
-
-
+ 
     printf("Creating a list: \n");
     insertAtEnd(&head, 10);
     insertAtEnd(&head, 20);
@@ -426,4 +419,5 @@ int main()
 
     return 0;
 }
+
 
