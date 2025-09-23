@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct Node
+struct Node //BluePrint
  {
     int data;
     struct Node* next;
@@ -14,7 +14,7 @@ struct Node* createNode(int data)
     newNode->next = NULL;
     return newNode;
 }
-
+//Perform Some insertions to create a LL to perform the Deletion Operations 
 void insertAtBeginning(struct Node** head, int data)
  {
     struct Node* newNode = createNode(data);
@@ -38,7 +38,7 @@ void insertAtEnd(struct Node** head, int data)
     }
     temp->next = newNode;
 }
-
+//To Display the List
 void displayList(struct Node* head)
  {
     if (head == NULL)
@@ -56,7 +56,7 @@ void displayList(struct Node* head)
     }
     printf("NULL\n");
 }
-
+// To find if a node is there or not (Similar to search)
 struct Node* findNode(struct Node* head, int data)
  {
     struct Node* temp = head;
@@ -70,7 +70,7 @@ struct Node* findNode(struct Node* head, int data)
     }
     return NULL;
 }
-
+// To get length of LL
 int getLength(struct Node* head)
  {
     int count = 0;
@@ -426,3 +426,4 @@ int main()
 
     return 0;
 }
+
