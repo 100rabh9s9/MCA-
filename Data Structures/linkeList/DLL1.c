@@ -1,11 +1,13 @@
+//Intro Program to Doubly Linked List 
 #include <stdio.h>
 #include <stdlib.h>
 
-// Define node structure
+// Define node structure 
+//The BluePrint 
 struct Node
 {
     int data;
-    struct Node* prev;
+    struct Node* prev; // To point to Previous Node 
     struct Node* next;
 };
 
@@ -73,3 +75,4 @@ int main()
 
     return 0;
 }
+
