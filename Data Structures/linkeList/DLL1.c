@@ -8,7 +8,7 @@ struct Node
 {
     int data;
     struct Node* prev; // To point to Previous Node 
-    struct Node* next;
+    struct Node* next; // Pointer to Next Node 
 };
 
 // Global head pointer
@@ -17,9 +17,9 @@ struct Node* head = NULL;
 // Insert at the end
 void insert_end(int value)
  {
-    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node)); //Dynamic Memory Allocation 
     newNode->data = value;
-    newNode->prev = NULL;
+    newNode->prev = NULL;  //Intially set to Null
     newNode->next = NULL;
 
     if (head == NULL)
@@ -37,17 +37,15 @@ void insert_end(int value)
     temp->next = newNode;
     newNode->prev = temp;
 }
-// Display the list
+// Display the list General Traversal 
 void display()
  {
     struct Node* temp = head;
-
     if (temp == NULL)
      {
         printf("List is empty.\n");
         return;
     }
-
     printf("Doubly Linked List: ");
     while (temp != NULL)
     {
@@ -58,10 +56,10 @@ void display()
     }
     printf("\n");
 }
+//Main Function 
 int main()
 {
     int n, value;
-
     printf("Enter the number of elements to insert: ");
     scanf("%d", &n);
 
@@ -69,10 +67,8 @@ int main()
      {
         printf("Enter value %d: ", i);
         scanf("%d", &value);
-        insert_end(value);
+        insert_end(value);//Insertion at End
     }
     display();
-
     return 0;
 }
-
