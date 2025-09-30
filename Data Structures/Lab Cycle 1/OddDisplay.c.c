@@ -1,14 +1,5 @@
-/******************************************************************************
-
-Welcome to GDB Online.
-GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
-C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
-Code, Compile, Run and Debug online from anywhere in world.
-
-*******************************************************************************/
 #include <stdio.h>
-
-void OddDisplay(int arr[],int size)
+void OddDisplay(int arr[],int size) //Odd Position Display 
 {
     printf("\n Odd Valued Elements: ");
     for(int i=0;i<size;i++) 
@@ -18,18 +9,15 @@ void OddDisplay(int arr[],int size)
             printf("%d",arr[i]);
             printf("\t");
         }
-    }
-     
+    }     
 }
-
 int main() 
 {
-    int arr[100], size;
-
+    int arr[100], size; //Static Allocation 
     printf("Enter the size of the array: ");
     scanf("%d", &size);
 
-    if (size < 0 || size > 100)
+    if (size < 0 || size > 100)  //Checking for invalid conditions 
     {
         printf("Invalid size.\n");
         return 1;
