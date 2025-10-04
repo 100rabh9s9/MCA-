@@ -12,14 +12,15 @@ class bank
 
     public static void main(String[] args)
      {
-         bank b = new bank();
-         b.inputdetail();
-         b.printdetails();
+         bank B = new bank();
+         B.inputdetail();
+         B.printdetails();
         
     }
     public void inputdetail()
     {
         Scanner sc = new Scanner(System.in);
+        
         System.out.println("Enter Account Number:");
         accno = sc.nextInt();
         System.out.println("Enter Name : ");
