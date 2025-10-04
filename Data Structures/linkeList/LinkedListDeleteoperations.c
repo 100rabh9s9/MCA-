@@ -14,7 +14,7 @@ struct Node* createNode(int data)
     newNode->next = NULL;
     return newNode;
 }
-//Perform Some insertions to create a LL to perform the Deletion Operations 
+//Perform  insertions to create a LL to perform the Deletion Operations (Since Only Deletion is performed here)
 void insertAtBeginning(struct Node** head, int data)
  {
     struct Node* newNode = createNode(data);
@@ -419,5 +419,6 @@ int main()
 
     return 0;
 }
+
 
 
