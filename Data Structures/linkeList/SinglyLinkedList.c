@@ -1,3 +1,5 @@
+//Complete Linked List Program with all Insertions and Deletion Operations
+// Possible cases have been noted for insertion and deletion 
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -6,12 +8,10 @@ struct Node
     int data;
     struct Node* next;
 };
-
-
 struct Node* head = NULL;
 
-struct Node* createNode(int data);
-struct Node* findNode(int data);
+struct Node* createNode(int data); //From BluePrint
+struct Node* findNode(int data); //Helper Function for all cases 
 
 
 void createList();
@@ -35,8 +35,6 @@ void reverseList();
 void displayAlternateNodes();
 void displayEvenPositionNodes();
 int findMiddleNode();
-
-
 
 int main()
 {
@@ -132,7 +130,7 @@ int main()
             case 15:
                 printf("Enter value to search: ");
                 scanf("%d", &data);
-                if (search(data)) printf("✅ %d found in the list.\n", data);
+                if (search(data)) printf(" %d found in the list.\n", data);
                 else printf("  %d not found in the list.\n", data);
                 break;
             case 16:
@@ -500,7 +498,6 @@ void deleteBetweenNodes(int val1, int val2)
         printf("Nodes not found or not enough nodes to delete between.\n");
         return;
     }
-
 
     struct Node* middle = temp->next;
     if (middle->next->data != val2)
