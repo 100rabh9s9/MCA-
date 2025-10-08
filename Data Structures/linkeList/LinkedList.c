@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+//Blueprint for node creation 
 struct Node
 {
     int data;
@@ -21,7 +21,7 @@ void insertAfterNode(int key, int data);
 void insertBeforeNode(int key, int data);
 void insertBetweenNodes(int value1, int value2, int newData);
 void insertAtPosition(int position, int data);
-struct Node* findNode(int data);
+struct Node* findNode(int data);  //Helper Function (used in search )
 struct Node* createNode(int data);
 
 int main()
@@ -434,3 +434,4 @@ void insertAtPosition(int position, int data)
     temp->next = newNode;
     printf("Node with value %d inserted at position %d.\n", data, position);
 }
+
