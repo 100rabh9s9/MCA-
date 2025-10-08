@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 void ArrayReverse(int arr[],int size)
 {
     for(int i=0;i< size/2;i++)
@@ -12,20 +11,16 @@ void ArrayReverse(int arr[],int size)
         }
     }
 }
-
 int main() 
 {
     int arr[100], size;
-
     printf("Enter the size of the array: ");
     scanf("%d", &size);
-
     if (size < 0 || size > 100)
     {
         printf("Invalid size.\n");
         return 1;
     }
-
     printf("Enter %d elements:\n", size);
     for (int i = 0; i < size; i++) 
     {
