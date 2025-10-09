@@ -179,7 +179,7 @@ void createList()
     scanf("%d", &n);
     if (n <= 0)
     {
-        printf("Number of nodes must be positive.\n");
+        printf("Minimum Number of Nodes Must Be atleast 3 .\n");
         return;
     }
     while (head != NULL)
@@ -201,7 +201,7 @@ void displayList()
 {
     struct Node* temp = head;
     if (temp == NULL)
-        {
+    {
         printf("List is empty.");
         return;
     }
@@ -220,9 +220,11 @@ int search(int key)
  {
     struct Node* temp = head;
     while (temp != NULL)
-        {
+    {
         if (temp->data == key)
-            return 1;
+        {
+            return temp; 
+        } 
         temp = temp->next;
     }
     return 0;
@@ -434,4 +436,5 @@ void insertAtPosition(int position, int data)
     temp->next = newNode;
     printf("Node with value %d inserted at position %d.\n", data, position);
 }
+
 
