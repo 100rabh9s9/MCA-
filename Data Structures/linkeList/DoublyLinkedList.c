@@ -4,10 +4,9 @@
 struct Node
 {
     int data;
-    struct Node* prev;
+    struct Node* prev; // Point to previous Node 
     struct Node* next;
 };
-
 struct Node* head = NULL;
 
 void CreateList(int value)
@@ -27,7 +26,6 @@ void CreateList(int value)
         head = newNode;
         return;
     }
-
     struct Node* temp = head;
     while (temp->next != NULL)
      {
@@ -56,11 +54,10 @@ void display()
     printf("\n");
 }
 
-void search(int value)
+void search(int value)  //Helper Function for Searching a value 
 {
     struct Node* temp = head;
     int position = 1;
-
     while (temp != NULL)
     {
         if (temp->data == value)
@@ -145,8 +142,6 @@ int findMiddleNode()
     }
     return L_ptr->data;
 }
-
-
 void insertAtBeginning(int value)
 {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
@@ -185,7 +180,6 @@ void insertAfterNode(int prevValue, int newValue)
         printf("Node with value %d not found.\n", prevValue);
         return;
     }
-
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = newValue;
     newNode->next = temp->next;
@@ -232,22 +226,20 @@ void insertBetweenNodes(int firstValue, int secondValue, int newValue)
 {
     struct Node* firstNode = head;
 
-    while (firstNode != NULL && firstNode->data != firstValue) {
+    while (firstNode != NULL && firstNode->data != firstValue)
+    {
         firstNode = firstNode->next;
     }
-
     if (firstNode == NULL)
     {
         printf("Node with value %d not found.\n", firstValue);
         return;
     }
-
     if (firstNode->next == NULL || firstNode->next->data != secondValue)
     {
         printf("Error: Nodes %d and %d are not adjacent.\n", firstValue, secondValue);
         return;
     }
-
     struct Node* secondNode = firstNode->next;
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     if (newNode == NULL)
@@ -447,7 +439,6 @@ void deleteAtPosition(int position)
         temp = temp->next;
         count++;
     }
-
     if (temp == NULL)
     {
         printf("Position %d is out of range.\n", position);
@@ -506,17 +497,20 @@ int main()
         printf("4. Display Alternate Nodes\n");
         printf("5. Display Even Position Nodes\n");
         printf("6. Find Middle Node\n");
+        
         printf("7. Insert a new node as the first node\n");
         printf("8. Insert a new node as the last node\n");
         printf("9. Insert a node after a given node\n");
         printf("10. Insert a node before a given node\n");
         printf("11. Insert a node between two nodes\n");
         printf("12. Insert a node at a particular position\n");
+        
         printf("13. Delete the first node\n");
         printf("14. Delete the last node\n");
         printf("15. Delete a node after a given node\n");
         printf("16. Delete a node before a given node\n");
         printf("17. Delete a node at a particular position\n");
+        
         printf("18. Reverse the list\n");
         printf("19.Display List\n ");
 
@@ -632,3 +626,4 @@ int main()
     }
     return 0;
 }
+
